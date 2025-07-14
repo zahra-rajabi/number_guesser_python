@@ -37,7 +37,13 @@ def main():
         else:
                 print(f'{"\033[34m"}Congratulation! you Guess the Number{"\033[0m"}')
                 print(f'your score is {score}')
-                break
+                wanna_play = input('do you want to play again?[y/n]')
+                if wanna_play.lower() == 'n':
+                  break
+                else:
+                     randnum = random.randint(1 , 100)
+                     score = 100
+                     continue
 
         score -= 10
         score = max(score , 0)
